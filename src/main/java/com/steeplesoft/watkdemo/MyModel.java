@@ -7,6 +7,14 @@ public class MyModel {
     private String foo;
     private int bar;
 
+    public MyModel() {
+    }
+
+    public MyModel(String foo, int bar) {
+        this.foo = foo;
+        this.bar = bar;
+    }
+
     public UUID getId() {
         return id;
     }

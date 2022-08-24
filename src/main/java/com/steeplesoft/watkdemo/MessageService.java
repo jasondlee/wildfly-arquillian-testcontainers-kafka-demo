@@ -12,13 +12,10 @@ import org.eclipse.microprofile.reactive.messaging.Outgoing;
 
 @Dependent
 public class MessageService {
-    private Jsonb jsonb = JsonbBuilder.create();
-
     @Incoming("model")
     @Outgoing("model-event")
     public Message<String> sendToKafka(MyModel model) {
-
-        String data = jsonb.toJson(model);
+        String data = JsonbBuilder.create().toJson(model);
         Message<String> m = Message.of(data);
 
         // Create Metadata containing the Kafka key

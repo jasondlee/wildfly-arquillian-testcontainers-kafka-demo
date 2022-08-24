@@ -14,7 +14,7 @@ public class MyResource {
 
     @POST
     public Response create(MyModel model) {
-        service.sendModel(model);
-        return Response.ok(model).build();
+        return Response.ok(service.sendModel(model))
+                .build();
     }
 }

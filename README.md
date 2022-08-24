@@ -26,7 +26,7 @@ $ cd kafka_2.13-3.2.1.tgz
 $ bin/zookeeper-server-start.sh config/zookeeper.properties
 $ bin/kafka-server-start.sh config/server.properties
 (This next is optional)
-$ bin/kafka-console-consumer.sh --topic IncidentReportedEvent --from-beginning --bootstrap-server localhost:9092
+$ bin/kafka-console-consumer.sh --topic ModelEvent --from-beginning --bootstrap-server localhost:9092
 ```
 
 ### Deploying the application
